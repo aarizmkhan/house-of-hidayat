@@ -1,25 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Courses | House of Hidayat</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Hidayat | Courses</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="container">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="courses.html">Courses</a>
-</nav>
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">Courses</h1>
+      <div class="basmallah">﷽</div>
+      <p class="verse">
+        Choose a course to begin — we’ll keep adding more as your site grows.
+      </p>
+    </section>
 
-<h1>Courses</h1>
-<ul>
-  <li>Qur’an Foundations</li>
-  <li>Reading Fluency</li>
-  <li>Coming Soon: Tajweed</li>
-</ul>
+    <section class="section">
+      <div class="cards">
+        <div class="card">
+          <h3>Noorani Qaida / Arabic Letters</h3>
+          <p>Start from the basics: letters, sounds, joining rules, and reading practice.</p>
+          <button class="btn" data-course="Noorani Qaida / Arabic Letters">Enroll</button>
+        </div>
 
-<script src="script.js"></script>
+        <div class="card">
+          <h3>Qur’an Reading (Beginner → Intermediate)</h3>
+          <p>Improve fluency, accuracy, and confidence with structured lessons.</p>
+          <button class="btn" data-course="Qur’an Reading (Beginner → Intermediate)">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Tajweed Essentials</h3>
+          <p>Learn key tajweed rules (makharij, madd, rules of noon/meem) with practice.</p>
+          <button class="btn" data-course="Tajweed Essentials">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Memorization (Hifz) Program</h3>
+          <p>Daily/weekly memorization plan, revision system (muraja’ah), and consistency tips.</p>
+          <button class="btn" data-course="Memorization (Hifz) Program">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Meaning & Vocabulary</h3>
+          <p>Learn common Qur’anic words and phrases to understand what you recite.</p>
+          <button class="btn" data-course="Meaning & Vocabulary">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Tafsir (Understanding the Message)</h3>
+          <p>Learn themes and lessons from selected surahs and how to apply them in life.</p>
+          <button class="btn" data-course="Tafsir (Understanding the Message)">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Daily Duas & Adhkar</h3>
+          <p>Morning/evening adhkar, daily duas, and building a consistent routine.</p>
+          <button class="btn" data-course="Daily Duas & Adhkar">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Qur’an for Everyday Life</h3>
+          <p>Practical lessons: habits, manners, family life, patience, gratitude, and character.</p>
+          <button class="btn" data-course="Qur’an for Everyday Life">Enroll</button>
+        </div>
+
+        <div class="card">
+          <h3>Kids Track</h3>
+          <p>Short, engaging lessons for children with a simple reward-based practice plan.</p>
+          <button class="btn" data-course="Kids Track">Enroll</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> House of Hidayat
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
