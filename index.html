@@ -1,137 +1,57 @@
-:root{
-  --bg: #cfe9ff;          /* light blue */
-  --text: #0b0b0b;        /* black */
-  --gold: #b38b00;        /* golden */
-  --card: rgba(255,255,255,0.70);
-  --border: rgba(0,0,0,0.12);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Hidayat | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+  </header>
 
-*{ box-sizing: border-box; }
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">House of Hidayat</h1>
 
-body{
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
+      <!-- Golden basmallah under title -->
+      <div class="basmallah">﷽</div>
 
-.container{
-  width: min(1000px, 92%);
-  margin: 0 auto;
-}
+      <!-- Bigger black verse -->
+      <p class="verse">
+        “This is the Book about which there is no doubt, a guidance for the mindful.”
+        <span class="ayahref">Qur’an 2:2</span>
+      </p>
+    </section>
 
-header{
-  padding: 20px 0 10px;
-}
+    <section class="section">
+      <h2>Start learning with a clear path</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Beginner Friendly</h3>
+          <p>Step-by-step lessons to build confidence in reading the Qur’an.</p>
+        </div>
+        <div class="card">
+          <h3>Practical Understanding</h3>
+          <p>Learn meanings and how to apply Qur’anic guidance in daily life.</p>
+        </div>
+        <div class="card">
+          <h3>Consistent Progress</h3>
+          <p>Short practice plans that help you improve every week.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-nav{
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding: 12px 0;
-}
+  <footer>
+    © <span id="year"></span> House of Hidayat
+  </footer>
 
-nav a{
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-}
-
-nav a:hover{
-  border-color: var(--border);
-  background: rgba(255,255,255,0.6);
-}
-
-.hero{
-  text-align: center;
-  padding: 30px 0 10px;
-}
-
-.title{
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 900;
-  margin: 0;
-  color: var(--text);
-}
-
-.basmallah{
-  margin: 10px 0 18px;
-  font-size: clamp(20px, 3vw, 30px);
-  font-weight: 800;
-  color: var(--gold);
-  letter-spacing: 0.2px;
-}
-
-.verse{
-  font-size: clamp(18px, 2.2vw, 26px); /* bigger */
-  font-weight: 800;                    /* like title */
-  color: var(--text);
-  margin: 10px auto 0;
-  line-height: 1.45;
-  max-width: 750px;
-}
-
-.ayahref{
-  display: block;
-  margin-top: 10px;
-  font-weight: 900;
-}
-
-.section{
-  padding: 24px 0 44px;
-}
-
-.cards{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.card h3{
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.card p{
-  margin: 0;
-  line-height: 1.6;
-}
-
-.btn{
-  display: inline-block;
-  margin-top: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.75);
-  color: var(--text);
-  font-weight: 800;
-  padding: 10px 14px;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-.btn:hover{
-  background: rgba(255,255,255,0.95);
-}
-
-footer{
-  border-top: 1px solid var(--border);
-  padding: 18px 0;
-  text-align: center;
-  font-weight: 700;
-}
-
-@media (max-width: 900px){
-  .cards{ grid-template-columns: 1fr; }
-}
+  <script src="script.js"></script>
+</body>
+</html>
