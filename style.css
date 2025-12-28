@@ -154,4 +154,59 @@ input, select, textarea{
 
 input:focus, select:focus, textarea:focus{
   border-color: rgba(179,139,0,0.8);
+/* === CONTACT FORM FIX (match site style) === */
+
+form {
+  background: transparent;
 }
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 800;
+  color: #000; /* black text */
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  font-size: 16px;
+
+  /* Match site look */
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #b38b00; /* gold focus */
+  background: #ffffff;
+}
+
+/* Remove Formspree's default small boxes */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+/* Button already matches, just reinforce */
+button.btn {
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-weight: 900;
+}
+
