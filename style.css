@@ -1,212 +1,211 @@
-:root{
-  --bg: #cfe9ff;          /* light blue */
-  --text: #0b0b0b;        /* black */
-  --gold: #b38b00;        /* golden */
-  --card: rgba(255,255,255,0.70);
-  --border: rgba(0,0,0,0.12);
+/* =========================
+   GLOBAL THEME
+   ========================= */
+
+:root {
+  --light-blue: #cfe9ff;
+  --black: #000000;
+  --gold: #b38b00;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --border: rgba(0, 0, 0, 0.2);
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body{
+/* FORCE background everywhere */
+html, body {
   margin: 0;
+  padding: 0;
+  background: var(--light-blue) !important;
+  color: var(--black);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #cfe9ff; /* light blue */
-  color: #000;
 }
 
-.container{
+/* =========================
+   LAYOUT
+   ========================= */
+
+.container {
   width: min(1000px, 92%);
   margin: 0 auto;
 }
 
-header{
+header {
   padding: 20px 0 10px;
 }
 
-nav{
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding: 12px 0;
-}
-
-nav a{
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-}
-
-nav a:hover{
-  border-color: var(--border);
-  background: rgba(255,255,255,0.6);
-}
-
-.hero{
-  text-align: center;
-  padding: 30px 0 10px;
-}
-
-.title{
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 900;
-  margin: 0;
-  color: var(--text);
-}
-
-.basmallah{
-  margin: 10px 0 18px;
-  font-size: clamp(20px, 3vw, 30px);
-  font-weight: 800;
-  color: var(--gold);
-  letter-spacing: 0.2px;
-}
-
-.verse{
-  font-size: clamp(18px, 2.2vw, 26px); /* bigger */
-  font-weight: 800;                    /* like title */
-  color: var(--text);
-  margin: 10px auto 0;
-  line-height: 1.45;
-  max-width: 750px;
-}
-
-.ayahref{
-  display: block;
-  margin-top: 10px;
-  font-weight: 900;
-}
-
-.section{
-  padding: 24px 0 44px;
-}
-
-.cards{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.card h3{
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.card p{
-  margin: 0;
-  line-height: 1.6;
-}
-
-.btn{
-  display: inline-block;
-  margin-top: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.75);
-  color: var(--text);
-  font-weight: 800;
-  padding: 10px 14px;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-.btn:hover{
-  background: rgba(255,255,255,0.95);
-}
-
-footer{
+footer {
   border-top: 1px solid var(--border);
   padding: 18px 0;
   text-align: center;
   font-weight: 700;
 }
 
-@media (max-width: 900px){
-  .cards{ grid-template-columns: 1fr; }
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
-label{
-  display:block;
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
   font-weight: 800;
-  margin-top: 12px;
-}
-
-input, select, textarea{
-  width: 100%;
-  margin-top: 6px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.18);
-  background: rgba(255,255,255,0.85);
-  font-size: 16px;
-  outline: none;
 }
 
-input:focus, select:focus, textarea:focus{
-  border-color: rgba(179,139,0,0.8);
-/* === CONTACT FORM FIX (match site style) === */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   HERO / TITLES
+   ========================= */
+
+.hero {
+  text-align: center;
+  padding: 30px 0 20px;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  margin: 0;
+  color: var(--black);
+}
+
+.basmallah {
+  margin: 10px 0 18px;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.verse {
+  font-size: clamp(18px, 2.3vw, 26px);
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.ayahref {
+  display: block;
+  margin-top: 10px;
+  font-weight: 900;
+}
+
+/* =========================
+   SECTIONS & CARDS
+   ========================= */
+
+.section {
+  padding: 24px 0 44px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  font-weight: 900;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--black);
+}
+
+.btn:hover {
+  background: #ffffff;
+}
+
+/* =========================
+   CONTACT FORM (FORCE STYLE)
+   ========================= */
 
 form {
-  background: transparent;
+  background: transparent !important;
 }
 
 label {
   display: block;
   margin-top: 14px;
-  font-weight: 800;
-  color: #000; /* black text */
+  font-weight: 900;
+  color: var(--black);
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 12px 14px;
   margin-top: 6px;
+  padding: 12px 14px;
   font-size: 16px;
 
-  /* Match site look */
-  background: rgba(255, 255, 255, 0.85);
-  color: #000;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: var(--black) !important;
+
+  border: 1px solid var(--border);
   border-radius: 14px;
-
   outline: none;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgba(0, 0, 0, 0.55);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #b38b00; /* gold focus */
+  border-color: var(--gold);
   background: #ffffff;
 }
 
-/* Remove Formspree's default small boxes */
+/* Remove Formspree default small boxes */
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
 }
 
-/* Button already matches, just reinforce */
-button.btn {
-  margin-top: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  color: #000;
-  font-weight: 900;
-}
+/* =========================
+   MOBILE
+   ========================= */
 
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
