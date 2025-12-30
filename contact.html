@@ -1,53 +1,70 @@
-<form
-  id="contactForm"
-  action="https://formspree.io/f/xzdbgkrp"
-  method="POST"
->
-  <label>
-    Name
-    <input name="name" required />
-  </label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Hidayat | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <label>
-    Email
-    <input type="email" name="email" required />
-  </label>
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">Contact</h1>
+      <div class="basmallah">﷽</div>
+      <p class="verse">Send a message to enroll or ask a question.</p>
+    </section>
 
-  <!-- This helps Formspree reply correctly -->
-  <input type="hidden" name="_replyto" />
+    <section class="section">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <div class="card">
+          <h3>Enrollment / Questions</h3>
 
-  <label>
-    Phone (optional)
-    <input name="phone" />
-  </label>
+          <form id="contactForm" action="https://formspree.io/f/xzdbgkrp" method="POST">
+            <label>
+              Name
+              <input name="name" required />
+            </label>
 
-  <label>
-    Interested Course
-    <select name="course" required>
-      <option value="">Select one</option>
-      <option>Noorani Qaida / Arabic Letters</option>
-      <option>Qur’an Reading (Beginner → Intermediate)</option>
-      <option>Tajweed Essentials</option>
-      <option>Memorization (Hifz) Program</option>
-      <option>Meaning & Vocabulary</option>
-      <option>Tafsir (Understanding the Message)</option>
-      <option>Daily Duas & Adhkar</option>
-      <option>Qur’an for Everyday Life</option>
-      <option>Kids Track</option>
-    </select>
-  </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
 
-  <label>
-    Message
-    <textarea name="message" rows="6" required></textarea>
-  </label>
+            <label>
+              Phone (optional)
+              <input name="phone" />
+            </label>
 
-  <!-- Email subject -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Contact from House of Hidayat Website"
-  />
+            <label>
+              Interested Course
+              <select name="course" required>
+                <option value="">Select one</option>
+                <option>Noorani Qaida / Arabic Letters</option>
+                <option>Qur’an Reading (Beginner → Intermediate)</option>
+                <option>Tajweed Essentials</option>
+                <option>Memorization (Hifz) Program</option>
+                <option>Meaning & Vocabulary</option>
+                <option>Tafsir (Understanding the Message)</option>
+                <option>Daily Duas & Adhkar</option>
+                <option>Qur’an for Everyday Life</option>
+                <option>Kids Track</option>
+              </select>
+            </label>
 
-  <button class="btn" type="submit">Send</button>
-</form>
+            <label>
+              Message
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send</button>
+            <p id="formStatus" style="font-weight:900; margin-top:12px;"></p>
+          </
