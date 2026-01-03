@@ -331,4 +331,40 @@ header{
 nav{
   backdrop-filter: blur(6px);
 }
+/* =========================
+   EXTRA POLISH: subtle background gradient + gold section separators
+   ========================= */
+
+/* 1) Subtle “Islamic calm” gradient overlay */
+body{
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(255,255,255,0.22), transparent 60%),
+    radial-gradient(800px 450px at 85% 25%, rgba(179,139,0,0.12), transparent 55%),
+    var(--light-blue) !important;
+}
+
+/* 4) Gold section separators (under headings inside sections/cards) */
+.section h2{
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.section h2::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(320px, 85%);
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  opacity: 0.9;
+}
+
+/* Optional: make cards feel a touch more premium */
+.card{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+}
 
