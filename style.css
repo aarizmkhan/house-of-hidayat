@@ -306,3 +306,29 @@ nav a:hover{
 .basmallah{
   text-shadow: 0 6px 16px var(--gold-soft);
 }
+/* =========================
+   FINAL POLISH: DARKER BLUE + STICKY NAV
+   ========================= */
+
+/* Darker, calmer blue background */
+:root{
+  --light-blue: #a9d2f5;   /* darker than before, still calm */
+}
+
+/* Force it everywhere */
+html, body{
+  background: var(--light-blue) !important;
+}
+
+/* Sticky navigation */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Make sticky nav look intentional */
+nav{
+  backdrop-filter: blur(6px);
+}
+
